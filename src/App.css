@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+body{
+    background-color: rgba(48, 44, 44, 0.979);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 700px;
+    min-height: 600px;
+    background: #646981;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.todo-row{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    text-align: left;
+    box-shadow: 4px 4px 4px  #899ae7;
+    height: 100px;
+    padding: 16px;
+    background: linear-gradient(90deg, rgb(137, 137, 233) 0%,
+    rgb(61, 89, 228) 100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-hover {  
+    margin: 10px auto;
+    width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+/* .todo-hover :hover{
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+} */
+
+.icons{
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-form{
+    margin-bottom: 24px;
+}
+
+.todo-form.update{
+    margin: auto;
+}
+
+.todo-input{
+    background: #646981;
+    outline: none;
+    border: 2px solid #5167e4;
+    border-radius:4px 0px 0px 4px;
+    padding: 14px 32px 14px 16px;
+    width: 340px;
+    color: white;
+}
+.todo-input::placeholder{
+    color: white;
+}
+
+.todo-input.edit{
+    border:2px solid rgb(132, 180, 252);
+    
+}
+
+.todo-button.edit{
+    background-color: rgb(132, 180, 252);
+    
+}
+
+.todo-button{
+    background: #5e73dd;
+    outline: none;
+    border: none;
+    padding: 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-text{
+    display: grid;
 }
