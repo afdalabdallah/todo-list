@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
 import Todo from './Todo'
 import TodoForm from './TodoForm'
+import CreateTodo from '../modals/CreateTodo'
 
 function TodoList() {
     const [todos, setTodos] = useState([])
+    const [modal, setModal] = useState(false)
 
+    const toggle = () => {
+        setModal(!modal);
+    }
+    
     const addTodo = todo => {
         if(!todo.text){
             return
@@ -40,6 +46,8 @@ function TodoList() {
     return (
         <div>
           <h2>To Do</h2>
+          {/* <button onClick={() => setModal(true)}>Creat Task</button>
+          <CreateTodo toggle={toggle} modal = {modal} /> */}
           <TodoForm onSubmit={addTodo} />
           <div className="todo-container">
             <Todo 
@@ -49,6 +57,7 @@ function TodoList() {
             updateTodo = {updateTodo}
             />
           </div>
+         
           
         </div>
     )

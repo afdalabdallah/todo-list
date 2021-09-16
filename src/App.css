@@ -20,30 +20,62 @@ body{
     color: white;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     border-radius: 6px;
+    white-space: pre-wrap;
     text-align: left;
-    box-shadow: 4px 4px 4px  #899ae7;
+    margin: 11px;
+    width: 25%;
     height: 100px;
+    box-shadow: 4px 4px 4px  #6176db;
     padding: 16px;
     background: linear-gradient(90deg, rgb(137, 137, 233) 0%,
     rgb(61, 89, 228) 100%);
 }
 
-.todo-hover {  
-    margin: 10px auto;
-    width: 30%;
+.todo-row:nth-child( 4n+1 ){
+    background: linear-gradient(90deg, rgb(121, 121, 170) 0%,
+    rgb(39, 54, 129) 100%);
 }
 
-/* .todo-hover :hover{
+.todo-row:nth-child(4n+2){
+    background: linear-gradient(90deg, rgb(93, 209, 141) 0%,
+    rgb(58, 151, 97) 100%);
+}
+
+.todo-row:nth-child(4n+3){
+    background: linear-gradient(90deg, rgb(209, 201, 93) 0%,
+    rgb(94, 133, 44) 100%);
+}
+
+
+.todo-row:hover{
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
-} */
+}
 
 .icons{
     display: flex;
+    justify-content: flex-end;
     font-size: 16px;
     cursor: pointer;
+}
+
+.edit-icon{
+    margin-left: 3px;
+}
+
+.edit-icon:hover{
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.delet-icon:hover{
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .todo-form{
@@ -99,3 +131,4 @@ h2{
 .edit-text{
     display: grid;
 }
+

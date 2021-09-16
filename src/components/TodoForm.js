@@ -1,8 +1,10 @@
 import React,{useState, useEffect, useRef} from 'react'
+import TodoList from './TodoList';
+import CreateTodo from '../modals/CreateTodo';
 
 function TodoForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
-
+    
     const inputFocus = useRef(null)
     useEffect(() => {
         inputFocus.current.focus()
@@ -26,7 +28,7 @@ function TodoForm(props) {
         <form className={props.edit ? 'todo-form update' : 'todo-form'} onSubmit={handleRefresh}>
             {props.edit ? (
                 <>
-                <input
+                {/* <input
                 type="text"
                 placeholder="Update"
                 value={input}
@@ -35,8 +37,8 @@ function TodoForm(props) {
                 onChange={handleChange}
                 ref={inputFocus}
                 />
-                <button className="todo-button edit">Update</button>
-                {/* <div className="edit-text">
+                <button className="todo-button edit">Update</button> */}
+                <div className="edit-text">
                 <textarea 
                     rows="5" 
                     value={input}
@@ -48,7 +50,7 @@ function TodoForm(props) {
                     
                     <button >Update</button>
                    
-                </div> */}
+                </div>
 
                 </>
                 )
@@ -66,6 +68,8 @@ function TodoForm(props) {
                     />
                     
                     <button className="todo-button">Add</button>
+                     
+                    
                     </>
                 )}
 
