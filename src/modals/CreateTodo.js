@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const CreateTodo = ({modal, toggle}) => {
     return (
-        <div>
+       
         <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle}>Modal title</ModalHeader>
             <ModalBody>
@@ -14,7 +14,7 @@ const CreateTodo = ({modal, toggle}) => {
                 <Button color="secondary" onClick={toggle}>Cancel</Button>
             </ModalFooter>
         </Modal>
-        </div>
+     
     )
 }
 

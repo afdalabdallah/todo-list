@@ -28,29 +28,18 @@ function TodoForm(props) {
         <form className={props.edit ? 'todo-form update' : 'todo-form'} onSubmit={handleRefresh}>
             {props.edit ? (
                 <>
-                {/* <input
-                type="text"
-                placeholder="Update"
-                value={input}
-                name="text" 
-                className="todo-input edit"
-                onChange={handleChange}
-                ref={inputFocus}
-                />
-                <button className="todo-button edit">Update</button> */}
-                <div className="edit-text">
                 <textarea 
-                    rows="5" 
+                    rows="7" 
                     value={input}
+                    className="todo-update"
+                    placeholder= "Update todo"
                     onChange={handleChange}
                     ref={inputFocus}
-                    >
-
-                    </textarea>
-                    
-                    <button >Update</button>
+                >
+                </textarea>  
+                    <button className="update-button">Update</button>
                    
-                </div>
+              
 
                 </>
                 )

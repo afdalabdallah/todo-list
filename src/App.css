@@ -1,17 +1,17 @@
 body{
-    background-color: rgba(48, 44, 44, 0.979);
+    background-color: rgba(140, 180, 207, 0.979);
 }
 
 .App{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 700px;
+    width: 1000px;
     min-height: 600px;
     background: #646981;
     text-align: center;
     margin: 128px auto;
-    border-radius: 10px;
+    border-radius: 6px;
     padding-bottom: 32px;
 }
 
@@ -25,27 +25,31 @@ body{
     white-space: pre-wrap;
     text-align: left;
     margin: 11px;
+    margin-left: 32px;
     width: 25%;
     height: 100px;
-    box-shadow: 4px 4px 4px  #6176db;
+    box-shadow: 4px 4px 10px  #6d61db;
     padding: 16px;
     background: linear-gradient(90deg, rgb(137, 137, 233) 0%,
     rgb(61, 89, 228) 100%);
 }
 
 .todo-row:nth-child( 4n+1 ){
-    background: linear-gradient(90deg, rgb(121, 121, 170) 0%,
-    rgb(39, 54, 129) 100%);
+    background: linear-gradient(90deg, rgb(120, 175, 159) 0%,
+    rgb(91, 133, 121) 100%);
+    box-shadow: 4px 4px 10px #476b53;
 }
 
 .todo-row:nth-child(4n+2){
-    background: linear-gradient(90deg, rgb(93, 209, 141) 0%,
-    rgb(58, 151, 97) 100%);
+    background: linear-gradient(90deg, #eb7a93 0%,
+    #c74a65 100%);
+    box-shadow: 4px 4px 10px #913a4b;
 }
 
 .todo-row:nth-child(4n+3){
-    background: linear-gradient(90deg, rgb(209, 201, 93) 0%,
-    rgb(94, 133, 44) 100%);
+    background: linear-gradient(90deg, rgb(226, 163, 105) 0%,
+    rgb(185, 135, 87) 100%);
+    box-shadow: 4px 4px 10px rgb(177, 120, 66);
 }
 
 
@@ -84,6 +88,7 @@ body{
 
 .todo-form.update{
     margin: auto;
+    
 }
 
 .todo-input{
@@ -128,7 +133,38 @@ h2{
     flex-wrap: wrap;
 }
 
-.edit-text{
+/* .edit-text{
+    width: 100%;
     display: grid;
+} */
+
+.todo-update{
+    background: linear-gradient(90deg, rgb(137, 137, 233) 0%,
+    rgb(61, 89, 228) 100%);
+    box-shadow: 4px 4px 4px  #5d6dc0;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    width: 90%;
+    margin-bottom: 5px;
+    border: 2px solid #5167e4;
+
 }
+
+.todo-update::placeholder{
+    color: rgb(173, 170, 170);
+}
+
+.update-button{
+    color: white;
+    background: #5e73dd;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px auto;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #4556ad;
+}
+
+
 

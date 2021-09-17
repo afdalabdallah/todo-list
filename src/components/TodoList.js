@@ -5,18 +5,13 @@ import CreateTodo from '../modals/CreateTodo'
 
 function TodoList() {
     const [todos, setTodos] = useState([])
-    const [modal, setModal] = useState(false)
-
-    const toggle = () => {
-        setModal(!modal);
-    }
+    
     
     const addTodo = todo => {
         if(!todo.text){
             return
         }
         const newTodos = [todo, ...todos]
-
         setTodos(newTodos)
     }
 
@@ -44,7 +39,7 @@ function TodoList() {
     }
 
     return (
-        <div>
+        <>
           <h2>To Do</h2>
           {/* <button onClick={() => setModal(true)}>Creat Task</button>
           <CreateTodo toggle={toggle} modal = {modal} /> */}
@@ -57,9 +52,9 @@ function TodoList() {
             updateTodo = {updateTodo}
             />
           </div>
-         
+        </>
           
-        </div>
+        
     )
 }
 
